@@ -118,17 +118,12 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|  Customer      |CustomerID (PK), Name, Phone_No                    |  Customers reserving tables or ordering food     |
-|  Waiter      |   WaiterID (PK), Name|
-Waiters serve reservations/orders            |
-| Reservation/Order       |  OrderID (PK), Date, Time, Guests |
-Customer reservations and placed orders                  |
-| Dish       |   DishID (PK), Name, CategoryNo (FK)|
-Dishes available to order                     |
-| Category       |  CategoryNo (PK), CategoryName|
-Dish classification (Starter, Main, Dessert)             |
-|Bill | BillID (PK), Amount, Total|
-Bill generated for each order                     |
+|  Customer      |CustomerID (PK), Name, Phone_No |  Customers reserving tables or ordering food     |
+|  Waiter      |   WaiterID (PK), Name|  Waiters serve reservations/orders            |
+| Reservation/Order       |  OrderID (PK), Date, Time, Guests | Customer reservations and placed orders                  |
+| Dish       |   DishID (PK), Name, CategoryNo (FK)|Dishes available to order                     |
+| Category       |  CategoryNo (PK), CategoryName| Dish classification (Starter, Main, Dessert)             |
+|Bill | BillID (PK), Amount, Total|Bill generated for each order                     |
 
 ### Relationships and Constraints
 
