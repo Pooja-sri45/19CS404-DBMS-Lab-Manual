@@ -67,8 +67,7 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-![WhatsApp Image 2025-08-29 at 18 33 25_33c5c187](https://github.com/user-attachments/assets/ac1c7a20-2107-4d05-8bf9-432117f68a11)
-
+![WhatsApp Image 2025-08-29 at 18 58 43_bd5ce43e](https://github.com/user-attachments/assets/ab20d657-0baf-4f2a-9316-45b942326daf)
 
 ### Entities and Attributes
 
@@ -85,8 +84,8 @@ The Central Library wants to manage book lending and cultural events.
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
 |  Member – Book            |  M:N          |   Mandatory for Book            | Members borrow books      |
-|  Event – Room            |            |   M:N            | Mandatory for Event      Events are held in rooms|
-|   Event – Speaker           |            |   M:N            |Mandatory for Event     Events have speakers  |
+|  Event – Room            |         M:N            | Mandatory for Event|      Events are held in rooms|
+|   Event – Speaker          |   M:N            |Mandatory for Event  |   Events have speakers  |
 
 ### Assumptions
 - Each book can be borrowed by one member at a time.
