@@ -41,8 +41,8 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 |--------------|------------|---------------|-------|
 | Member – Program             |   M:N         | Optional for Member, Mandatory for Program        | Member may or may not join programs      |
 |  Trainer – Program       |   M:N          |  Mandatory for both             | Trainer may or may not run Programs      |
-|  Member – Payment            |   1:N        |  Mandatory for Payment             |Payments belong to members
-       |
+|  Member – Payment            |   1:N        |  Mandatory for Payment             |Payments belong to members |
+
 ### Assumptions
 - Every member must enroll in at least one program.
 
@@ -74,25 +74,27 @@ The Central Library wants to manage book lending and cultural events.
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+| Member       |  MemberID (PK), Name, Age                  |  Library members who borrow books and attend events     |
+| Book       |  BookID (PK), Title, Author, Category                  | Books available for borrowing      |
+| Event       |  EventID (PK), ProgramID, Date                  | Events organized by the library      |
+|  Room      |    RoomID (PK), Name                | Rooms for study or events      |
+|  Speaker      | SpeakerID (PK), Name                   | Speakers/authors who present at events      |
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+|  Member – Book            |  M:N          |   Mandatory for Book            | Members borrow books      |
+|  Event – Room            |            |   M:N            | Mandatory for Event      Events are held in rooms|
+|   Event – Speaker           |            |   M:N            |Mandatory for Event     Events have speakers  |
 
 ### Assumptions
-- 
-- 
-- 
+- Each book can be borrowed by one member at a time.
 
+- Each event must have at least one speaker and one booked room.
+
+- Overdue fines apply only when books are not returned on time.
+  
 ---
 
 # Scenario C: Restaurant Table Reservation & Ordering
