@@ -110,31 +110,40 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-![WhatsApp Image 2025-08-29 at 18 58 42_142aaa2b](https://github.com/user-attachments/assets/b50728b0-2dff-46fa-8293-4f6d09d4f34e)
+![WhatsApp Image 2025-08-29 at 18 33 25_93afd7c3](https://github.com/user-attachments/assets/a3915b1b-61ce-4058-aa5e-0a97797a7aca)
+
 
 
 ### Entities and Attributes
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+|  Customer      |CustomerID (PK), Name, Phone_No                    |  Customers reserving tables or ordering food     |
+|  Waiter      |   WaiterID (PK), Name|
+Waiters serve reservations/orders            |
+| Reservation/Order       |  OrderID (PK), Date, Time, Guests |
+Customer reservations and placed orders                  |
+| Dish       |   DishID (PK), Name, CategoryNo (FK)|
+Dishes available to order                     |
+| Category       |  CategoryNo (PK), CategoryName|
+Dish classification (Starter, Main, Dessert)             |
+|Bill | BillID (PK), Amount, Total|
+Bill generated for each order                     |
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+| Customer – Waiter             |  1:1          |Mandatory               | Each reservation handled by one waiter      |
+|  Order – Dishes            |   M:N         |   Mandatory for order            |     An order contains many dishes  |
+|  Order – Bill            |    1:M        |   Mandatory for Bill            |  Each order generates one bill     |
 
 ### Assumptions
-- 
-- 
-- 
+- Each reservation/order is served by one waiter.
+
+- A dish belongs to exactly one category.
+
+- Bills are generated only after placing an order.
 
 ---
 
