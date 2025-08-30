@@ -1,7 +1,7 @@
 # ER Diagram Workshop – Submission Template
-# NAME:POOJASRI L
-# REG.NO:212223220076
-# DATE:30/08/2025
+## NAME:POOJASRI L
+## REG.NO:212223220076
+## DATE:30/08/2025
 
 ## Objective
 To understand and apply ER modeling concepts by creating ER diagrams for real-world applications.
