@@ -29,24 +29,27 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 | Entity | Attributes (PK, FK) | Notes |
 |--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+| Member       |  MemberID (PK), Name, Age, MembershipType, StartDate                  |   Stores details of gym members    |
+| Program       |  ProgramID (PK), ProgramName, Type                  |Represents fitness programs (Yoga, Zumba, etc.)       |
+| Trainer       |  TrainerID (PK), Name, Expertise                  |  Trainers who conduct/lead programs     |
+| Session       |   SessionID (PK), Date, TrainerID (FK)                 | Individual sessions (group/personal training)      |
+| Payment       |  PaymentID (PK), Account, Amount, Date                  |  Records payments for memberships or sessions     |
 
 ### Relationships and Constraints
 
 | Relationship | Cardinality | Participation | Notes |
 |--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
+| Member – Program             |   M:N         | Optional for Member, Mandatory for Program        | Member may or may not join programs      |
+|  Trainer – Program       |   M:N          |  Mandatory for both             | Trainer may or may not run Programs      |
+|  Member – Payment            |   1:N        |  Mandatory for Payment             |Payments belong to members
+       |
 ### Assumptions
-- 
-- 
-- 
+- Every member must enroll in at least one program.
+
+- Each program must have at least one trainer assigned.
+
+- Payments are always linked to members (no anonymous payments).
+ 
 
 ---
 
