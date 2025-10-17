@@ -342,3 +342,8 @@ WHERE grade = (
 
 ## RESULT
 Thus, the SQL queries to implement subqueries and views have been executed successfully.
+
+## Module 4 Score
+
+<img width="1307" height="82" alt="image" src="https://github.com/user-attachments/assets/af8ec0f5-ffaf-4cb0-b6f8-570d243f082f" />
+
