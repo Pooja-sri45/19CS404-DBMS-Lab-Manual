@@ -227,8 +227,10 @@ INSERT INTO employees VALUES (203, 'GoodPay', 'Trainee', 3500, 20)
 
 
 
+
 ![image](https://github.com/user-attachments/assets/9aaafeb9-876c-4a6c-816f-4c8bfe0f866a)
 
 ## RESULT
 Thus, the PL/SQL trigger programs were written and executed successfully.
+
 
